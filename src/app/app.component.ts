@@ -11,6 +11,7 @@ import {NgForm} from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   public users: User[];
+  public deleteUser:User;
 
   constructor(private userService: UserService) {
   }
@@ -32,9 +33,22 @@ export class AppComponent implements OnInit {
   }
 
   public onAddUser(addForm: NgForm): void {
-    document.getElementById('add-employee-form').click(); //close modal
+    document.getElementById('add-user-form').click(); //close modal
     this.userService.addUser(addForm.value).subscribe(
       (response: User) => {
+        console.log(response);
+        this.getUsers();
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      },
+    );
+  }
+
+  public onDeleteUser(id:number): void {
+    document.getElementById('delete-dismiss-button').click(); //close modal
+    this.userService.deleteUser(id).subscribe(
+      (response: void) => {
         console.log(response);
         this.getUsers();
       },
@@ -55,9 +69,12 @@ export class AppComponent implements OnInit {
 
     if (mode === 'add') {
       button.setAttribute('data-target', '#addUserModal');
-    } else if (mode === 'edit') {
+    }
+    if (mode === 'edit') {
       button.setAttribute('data-target', '#updateUserModal');
-    } else {
+    }
+    if (mode==='delete') {
+      this.deleteUser=user;
       button.setAttribute('data-target', '#deleteUserModal');
     }
 
