@@ -1,49 +1,38 @@
 <div class="container">
-  <div class="main-body">
-    <div class="navbar navbar-expand-md navbar-light bg-light mb-0" role="navigation">
-      <a class="navbar-brand" href="#">User menager</a>
+  <div class="main-body" >
+    <div class="navbar navbar-expand-md navbar-light bg-light" role="navigation" >
 
+      <a class="navbar-brand" href="#">User menager</a>
 
       <div class="input-group">
         <button type="button" class="btn btn-primary" style="margin-left:25rem; margin-right:1rem"
                 (click)="openModal(null,'add')">Add new user
         </button>
         <input type="text" id="example-input1-group2" name="example-input1-group2" class="form-control"
-               placeholder="Search for user">
+               placeholder="Search for user" (ngModelChange)="searchUser(key.value)" #key="ngModel" ngModel>
         <span class="input-group-btn">
                             <button type="button" class="btn btn-effect-ripple btn-primary"><i class="fa fa-search"></i></button>
-                        </span>
+        </span>
       </div>
 
 
     </div>
 
-    <div class="container" id="main-container">
+    <div class="container" id="main-container" style="  margin-top:2rem;">
       <div class="row">
         <div *ngFor="let user of users" class="col-md-6 col-xl-3">
           <div class="col mb-3">
-            <div class="card">
-              <img src="https://via.placeholder.com/340x120/FFB6C6/000000" alt="Cover" class="card-img-top">
-              <div class="card-body text-center">
-                <img src="{{user.imageUrl}}" style="width:100px;margin-top:-65px"
-                     alt="User" class="img-fluid img-thumbnail rounded-circle border-0 mb-3">
-                <h5 class="card-title">{{user.name}}</h5>
-                <p class="text-secondary mb-1">{{user.jobTitle}}</p>
-                <p class="text-secondary mb-1">{{user.email}}</p>
-                <p class="text-secondary mb-1">{{user.phone}}</p>
-              </div>
-              <div class="card-footer">
-                <div class="float-right btn-group btn-group-sm">
-                  <a (click)="openModal(user,'edit')" href="#" class="btn btn-primary tooltips" data-placement="top"
-                     data-toggle="tooltip"
-                     data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
-                  <a (click)="openModal(user,'delete')" href="#" class="btn btn-secondary tooltips" data-placement="top"
-                     data-toggle="tooltip"
-                     data-original-title="Delete"><i class="fa fa-times "></i></a>
+        <app-card [user]="user"></app-card>
+            <div class="card-footer" style="background-color: lightgray">
+              <div style="margin-left: auto ;">
+            <a (click) ="openModal(user, 'edit')" href="#" class="btn btn-primary tooltips" data-placement="top"
+               data-toggle="tooltip"
+               data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+            <a (click)="openModal(user, 'delete')" href="#" class="btn btn-secondary tooltips" data-placement="top"
+               data-toggle="tooltip"
+               data-original-title="Delete"><i class="fa fa-times "></i></a>
                 </div>
-              </div>
-            </div>
-          </div>
+           </div>
         </div>
       </div>
     </div>
@@ -92,6 +81,49 @@
     </div>
 
 
+    <!-- update user Modal -->
+    <div class="modal fade" id="updateUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="updateUserModalLabel">Add user</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form #updateForm="ngForm" (ngSubmit)="onUpdateUser(updateForm)">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" ngModel name="name" class="form-control" id="name" placeholder="Name" required value="{{updateUser?.name}}">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" ngModel name="email" class="form-control" id="email" placeholder="Email" required value="{{updateUser?.email}}">
+              </div>
+              <div class="form-group">
+                <label for="phone">Job title</label>
+                <input type="text" ngModel name="jobTitle" class="form-control" id="jobTile" placeholder="Job title" required value="{{updateUser?.jobTitle}}">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" ngModel name="phone" class="form-control" id="phone" placeholder="Phone" required value="{{updateUser?.phone}}">
+              </div>
+              <div class="form-group">
+                <label for="phone">Image URL</label>
+                <input type="text" ngModel name="imageUrl" class="form-control" id="imageUrl" placeholder="Image URL" required value="{{updateUser?.imageUrl}}">
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="update-user-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary" (click)="openModal(null,'add')" >Save changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <!-- delete User Modal -->
     <div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="deleteUserModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -111,8 +143,8 @@
       </div>
     </div>
 
-
-    <div class="col-lg-12 col-md-12 col-xl-12">
+<!-- NO EMPLOYES NOTIFICATION -->
+    <div *ngIf="users?.length==0" class="col-lg-12 col-md-12 col-xl-12">
       <div class="alert alert-info" role="alert">
         <h4 class="alert-heading">NO EMPLOYEES!</h4>
         <p>No Employees were found.</p>

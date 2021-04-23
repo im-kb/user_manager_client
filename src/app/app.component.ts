@@ -12,6 +12,7 @@ import {NgForm} from '@angular/forms';
 export class AppComponent implements OnInit {
   public users: User[];
   public deleteUser:User;
+  public updateUser:User;
 
   constructor(private userService: UserService) {
   }
@@ -45,6 +46,19 @@ export class AppComponent implements OnInit {
     );
   }
 
+  public onUpdateUser(addForm: NgForm): void {
+    document.getElementById('update-user-form').click(); //close modal
+    this.userService.updateUser(addForm.value).subscribe(
+      (response: User) => {
+        console.log(response);
+        this.getUsers();
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      },
+    );
+  }
+
   public onDeleteUser(id:number): void {
     document.getElementById('delete-dismiss-button').click(); //close modal
     this.userService.deleteUser(id).subscribe(
@@ -57,6 +71,20 @@ export class AppComponent implements OnInit {
       },
     );
   }
+
+  public searchUser(key:string):void{
+    const results:User[] = [];
+    for (const user of this.users){
+      if(user.name.toLowerCase().indexOf(key.toLowerCase())!==-1 ){
+        results.push(user);
+      }
+    }
+    this.users=results;
+    if(results.length==0||!key){
+      this.getUsers();
+    }
+  }
+
 
   public openModal(user: User, mode: string): void {
     const container = document.querySelector('.container');
@@ -71,6 +99,7 @@ export class AppComponent implements OnInit {
       button.setAttribute('data-target', '#addUserModal');
     }
     if (mode === 'edit') {
+      this.updateUser=user;
       button.setAttribute('data-target', '#updateUserModal');
     }
     if (mode==='delete') {
