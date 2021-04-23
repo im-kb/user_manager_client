@@ -8,16 +8,27 @@
         <button type="button" class="btn btn-primary" style="margin-left:25rem; margin-right:1rem"
                 (click)="openModal(null,'add')">Add new user
         </button>
+
         <input type="text" id="example-input1-group2" name="example-input1-group2" class="form-control"
                placeholder="Search for user" (ngModelChange)="searchUser(key.value)" #key="ngModel" ngModel>
         <span class="input-group-btn">
                             <button type="button" class="btn btn-effect-ripple btn-primary"><i class="fa fa-search"></i></button>
         </span>
+
       </div>
 
 
+
+    </div>
+    <div class="row">
+    <button type="button" class="btn btn-primary" id="changeViewButton" style="margin-left: auto; margin-top:0.5rem; margin-right: 1rem "
+            (click)="changeView()">Change to list view
+    </button>
+
     </div>
 
+
+<!--    GRID-->
     <div class="container" id="main-container" style="  margin-top:2rem;">
       <div class="row">
         <div *ngFor="let user of users" class="col-md-6 col-xl-3">
@@ -36,6 +47,15 @@
         </div>
       </div>
     </div>
+    </div>
+
+
+
+<!--          LIST-->
+      <div class="container" id="list-container" style="  margin-top:2rem; display: none" >
+        <app-user-list-table [users]="users" ></app-user-list-table>
+        </div>
+
 
 
     <!-- Add User Modal -->

@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   public users: User[];
   public deleteUser:User;
   public updateUser:User;
+  public isGrid:boolean=true;
 
   constructor(private userService: UserService) {
   }
@@ -109,6 +110,22 @@ export class AppComponent implements OnInit {
 
     container.appendChild(button);//add item do dom under div
     button.click();
+  }
+
+  public changeView():void{
+    if(this.isGrid){
+      document.getElementById('main-container').style.display="none";
+      document.getElementById('list-container').style.display="block"
+      document.getElementById('changeViewButton').innerText="Change to list";
+      this.isGrid=false;
+    }else{
+      document.getElementById('main-container').style.display="block";
+      document.getElementById('list-container').style.display="none";
+
+      this.isGrid=true;
+      document.getElementById('changeViewButton').innerText="Change to grid";
+    }
+
   }
 
 
