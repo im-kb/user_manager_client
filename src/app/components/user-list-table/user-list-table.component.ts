@@ -8,9 +8,23 @@ import {User} from '../../../model/User';
 })
 export class UserListTableComponent implements OnInit {
   @Input() users: User[];
+  isSortedAz:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
   }
+  public sortUsers():void{
+    if(this.isSortedAz===true)
+    {
+      this.users.sort((a,b) => (a.name < b.name) ? 1 : ((b.name < a.name) ? -1 : 0))
+      console.log(this.users);
+      this.isSortedAz=false;
+    }else{
+      this.users.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))
+      this.isSortedAz=true;
+      console.log(this.users);
+    }
 
+
+  }
 }

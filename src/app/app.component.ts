@@ -47,9 +47,8 @@ export class AppComponent implements OnInit {
     );
   }
 
-  public onUpdateUser(addForm: NgForm): void {
-    document.getElementById('update-user-form').click(); //close modal
-    this.userService.updateUser(addForm.value).subscribe(
+  public onUpdateUser(user:User): void {
+    this.userService.updateUser(user).subscribe(
       (response: User) => {
         console.log(response);
         this.getUsers();
@@ -116,14 +115,14 @@ export class AppComponent implements OnInit {
     if(this.isGrid){
       document.getElementById('main-container').style.display="none";
       document.getElementById('list-container').style.display="block"
-      document.getElementById('changeViewButton').innerText="Change to list";
+      document.getElementById('changeViewButton').innerText="Change to grid";
       this.isGrid=false;
     }else{
       document.getElementById('main-container').style.display="block";
       document.getElementById('list-container').style.display="none";
 
       this.isGrid=true;
-      document.getElementById('changeViewButton').innerText="Change to grid";
+      document.getElementById('changeViewButton').innerText="Change to list";
     }
 
   }

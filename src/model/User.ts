@@ -5,5 +5,4 @@ export interface User {
   jobTitle: string;
   phone: string;
   imageUrl: string;
-  userCode: string;
 }
