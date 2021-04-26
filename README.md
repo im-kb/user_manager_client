@@ -11,7 +11,7 @@ It is a single-page app made with angular.
 * **JavaScript**
 
 ## Features
-* Grid and list user view
+* Switch between grid and list user view
 * Sort users by their name A-Z or Z-A
 * Search users by name
 * Easy adding, deleting and updating made using modals.
@@ -21,28 +21,25 @@ It is a single-page app made with angular.
 ## Screenshots
 
 * Login screen
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="400" height="900">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
 
 * Wrong password info
-<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_wrong_pwd.png?raw=true" width="400" height="900">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
 
 * Browse screen
-<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_browse.png?raw=true" width="400" height="900">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
 
 * Menu drawer
-<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_drawer.png?raw=true" width="400" height="900">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
 
 * Book details
-<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_book_details.png?raw=true" width="400" height="900">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
 
 * User's books
-<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_clients_books.png?raw=true" width="400" height="900">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
 
 * Admin panel
-<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_admin_panel.png?raw=true" width="400" height="900">
-
-* Admin drawer
-<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_drawer_admin.png?raw=true" width="400" height="900">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
 
 
  
