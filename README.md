@@ -2,26 +2,49 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 
-## Development server
+It is a single-page app made with angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Technologies and libraries
+* **Angular**
+* **Bootstrap**
+* **JavaScript**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
+* Grid and list user view
+* Sort users by their name A-Z or Z-A
+* Search users by name
+* Easy adding, deleting and updating made using modals.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Screenshots
 
-## Running unit tests
+* Login screen
+<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_loginscreen.png?raw=true" width="400" height="900">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Wrong password info
+<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_wrong_pwd.png?raw=true" width="400" height="900">
 
-## Running end-to-end tests
+* Browse screen
+<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_browse.png?raw=true" width="400" height="900">
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Menu drawer
+<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_drawer.png?raw=true" width="400" height="900">
 
-## Further help
+* Book details
+<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_book_details.png?raw=true" width="400" height="900">
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* User's books
+<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_clients_books.png?raw=true" width="400" height="900">
+
+* Admin panel
+<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_admin_panel.png?raw=true" width="400" height="900">
+
+* Admin drawer
+<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_drawer_admin.png?raw=true" width="400" height="900">
+
+
+ 
+
+
+
