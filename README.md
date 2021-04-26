@@ -21,7 +21,7 @@ It is a single-page app made with angular.
 ## Screenshots
 
 * Login screen
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="600">
 
 * Wrong password info
 <img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
