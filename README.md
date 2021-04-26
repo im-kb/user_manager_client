@@ -21,7 +21,7 @@ It is a single-page app made with angular.
 ## Screenshots
 
 * Grid view
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-grid.png" width="1280" height="500">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-main.png" width="1280" height="500">
 
 * List view
 <img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-list.png" width="1280" height="500">
@@ -30,7 +30,7 @@ It is a single-page app made with angular.
 <img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-search.png" width="1280" height="500">
 
 * Sort by name
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-sort.png" width="1280" height="500">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-sorting.png" width="1280" height="500">
 
 * Delete user
 <img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="500">
