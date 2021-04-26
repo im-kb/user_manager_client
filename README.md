@@ -21,7 +21,7 @@ It is a single-page app made with angular.
 ## Screenshots
 
 * Login screen
-<img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_loginscreen.png?raw=true" width="400" height="900">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="400" height="900">
 
 * Wrong password info
 <img src="https://github.com/im-kb/bookstore_client/blob/dev/images/bookstore_wrong_pwd.png?raw=true" width="400" height="900">
