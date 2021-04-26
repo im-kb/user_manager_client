@@ -20,26 +20,21 @@ It is a single-page app made with angular.
 
 ## Screenshots
 
-* Login screen
+* Grid view
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-grid.png" width="1280" height="500">
+
+* List view
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-list.png" width="1280" height="500">
+
+* Search 
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-search.png" width="1280" height="500">
+
+* Sort by name
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-sort.png" width="1280" height="500">
+
+* Delete user
 <img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="500">
 
-* Wrong password info
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
-
-* Browse screen
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
-
-* Menu drawer
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
-
-* Book details
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
-
-* User's books
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
-
-* Admin panel
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-delete.png" width="1280" height="720">
 
 
  
