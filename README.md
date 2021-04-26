@@ -21,7 +21,7 @@ It is a single-page app made with angular.
 ## Screenshots
 
 * Grid view
-<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-main.png" width="80%" height="80%">
+<img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-main.png" width="100%" height="100%">
 
 * List view
 <img src="https://github.com/im-kb/user_manager_client/blob/main/images/user-manager-client-list.png" width="1280" height="500">
