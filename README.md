@@ -12,6 +12,7 @@ It is a single-page app made with angular.
 
 ## Features
 * Switch between grid and list user view
+* User list is split using pagination
 * Sort users by their name A-Z or Z-A
 * Search users by name
 * Easy adding, deleting and updating made using modals.
