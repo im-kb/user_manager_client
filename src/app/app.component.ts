@@ -15,7 +15,10 @@ export class AppComponent implements OnInit {
   public updateUser:User;
   public isGrid:boolean=true;
 
+
+
   constructor(private userService: UserService) {
+
   }
 
   ngOnInit() {

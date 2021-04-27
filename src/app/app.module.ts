@@ -7,6 +7,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { CardComponent } from './components/card/card.component';
 import { UserListTableComponent } from './components/user-list-table/user-list-table.component';
+import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,10 @@ import { UserListTableComponent } from './components/user-list-table/user-list-t
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,FormsModule
+    HttpClientModule, FormsModule, NgbPaginationModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
